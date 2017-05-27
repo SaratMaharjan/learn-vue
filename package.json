@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SaratMaharjan/learn-vue.git"
+    "url": "git+https://github.com/smhrjn/learn-vue.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SaratMaharjan/learn-vue/issues"
+    "url": "https://github.com/smhrjn/learn-vue/issues"
   },
-  "homepage": "https://github.com/SaratMaharjan/learn-vue#readme",
+  "homepage": "https://github.com/smhrjn/learn-vue#readme",
   "dependencies": {
     "vue": "^2.2.1"
   },
