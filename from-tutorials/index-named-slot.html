@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Learning Vue</title>
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/styles.css">
+
+</head>
+
+<body>
+
+	<div id="root" class="container">
+
+		<progress-view inline-template>
+			<div>
+				<h1>progress here : {{ completionRate }} </h1>
+				<button @click="completionRate += 10">Add Rate</button>
+			</div>
+		</progress-view>
+
+		<!--<modal>
+			<template slot="header">My Title</template>
+			Some text to override default
+			<template slot="footer">My Footer</template>
+		</modal>-->
+
+	</div>
+
+	<script src="https://unpkg.com/vue"></script>
+	<script src="src/main.js"></script>
+</body>
+
+</html>

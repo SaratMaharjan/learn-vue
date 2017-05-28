@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Learning Vue</title>
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/styles.css">
+
+</head>
+
+<body>
+	<!--<div id="app"> will load app from Component Here. </div>-->
+
+	<div id="root">
+
+		<button @click="showModal = true">Show Modal</button>
+		<modal v-if="showModal" @close="showModal=false"><p>Text inside modal</p></modal>
+
+		<hr>
+
+		<task-list></task-list>
+
+		<hr>
+
+		<h1>Incomplete Tasks</h1>
+		<ul>
+			<li v-for="task in incompleteTasks" v-text="task.description"></li>
+		</ul>
+
+		<hr>
+
+		<input type="text" id="input" v-model="newName">
+		<button @click="toggleClass" :title="title" :class="{ 'color-red': isLoading }">Add Name</button>
+		<div> {{ reversedMessage }}</div>
+
+		<hr>
+
+		<message title="Hello world" body="dafadfsad dsfadf adsfdasf dsfsadf af"></message>
+		<message title="2nd Hello world" body="dafadfsad dsfadf adsfdasf dsfsadf af"></message>
+
+	</div>
+
+
+	<script src="https://unpkg.com/vue"></script>
+	<script src="src/main.js"></script>
+</body>
+
+</html>
