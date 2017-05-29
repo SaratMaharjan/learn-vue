@@ -1,7 +1,8 @@
 <template>
 
-	<div class="counter">
+	<div class="counter" :style="{ backgroundColor: `hsl(${x}, 80%, 50%)` }" @mousemove="xCoordinate">
 		<h2>The Count: {{ count }} </h2>
+		<p>Pixels across: {{ x }}</p>
 		<p>
 			<button @click="count += 1">Increment</button>
 		</p>
@@ -11,13 +12,29 @@
 
 <script>
 	export default {
+
 		data() {
 			return {
-				count: 0
+				count: 0,
+				x: 0
+			}
+		},
+
+		methods: {
+			xCoordinate(e) {
+				this.x = e.clientX;
 			}
 		}
+
 	}
 </script>
 
 <style>
+.counter {
+  width: 100vw;
+  /*height: 100vh;*/
+  padding: 15vmin;
+  font-size: 30px;
+  transition: 0.2s background-color ease;
+}
 </style>
